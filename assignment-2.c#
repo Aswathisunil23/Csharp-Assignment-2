@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Assignment_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("prime number");
+            Console.WriteLine("enter a number");
+            int a = 0;
+            int num = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= num ; i++)
+            {
+                if (num % i == 0)
+                {
+                    a++;
+
+                }
+            }
+              if (a==2)
+                Console.WriteLine("prime number:"+num);
+              else
+                Console.WriteLine(" Not a prime number:" + num);
+
+
+
+
+
+
+            Console.WriteLine("sum of digits of a number");
+            int remainder = 0, sum = 0;
+            Console.WriteLine("enter the input");
+            int input = Convert.ToInt32(Console.ReadLine());
+            while (input != 0)
+            {
+                remainder = input % 10;
+                sum = sum + remainder;
+                input = input / 10;
+            }
+            Console.WriteLine("sum is" + sum);
+
+
+
+            Console.WriteLine("reverse a number");
+            Console.WriteLine("enter a number");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            int rem = 0, rev = 0;
+            while (number >0)
+            {
+                rem = number % 10;
+                rev = (rev * 10) + rem;
+                number = number / 10;
+                
+            }
+            Console.WriteLine("the reverse is " + rev);
+
+
+            Console.WriteLine("reverse a string");
+            string str, revstring = "";
+            Console.WriteLine("enter a string");
+            str = Console.ReadLine();
+            str = str.ToLower();
+            for (int i = str.Length - 1; i >= 0; i--)
+            {
+                revstring = revstring + str[i];
+
+            }
+            Console.WriteLine("reverse of a string "+revstring);
+
+        }
+    }
+}
